@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+$violet: hsl(257, 40%, 49%);
+$magenta: hsl(300, 69%, 71%);
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Open sans', sans-serif;
+	background: url('../images/bg-desktop.svg') no-repeat $violet;
+	background-size: cover;
+	padding: 5.3rem 7rem 3.9rem;
+	height: 100vh;
+	position: relative;
+}
+
+header .logo {
+	width: clamp(14.6rem, 30vw, 21.4rem);
+}
+
+.container {
+	display: flex;
+	gap: 5.4rem;
+
+	&__left {
+		flex: 0 1 55.5%;
+		padding-top: 8.5rem;
+		align-self: center;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__right {
+		flex: 1;
+		padding: 12.9rem 0 0;
+
+		h1 {
+			font-family: 'Poppins', sans-serif;
+			font-size: clamp(2.4rem, 3vw, 3.55rem);
+			font-weight: 600;
+			color: white;
+			line-height: 4.3rem;
+			letter-spacing: 0.01rem;
+		}
+
+		p {
+			font-size: 1.8rem;
+			line-height: 2.7rem;
+			padding-right: 1rem;
+			margin: 2.1rem 0 2.4rem;
+			color: white;
+		}
+
+		a {
+			font-family: 'Poppins', sans-serif;
+			font-weight: 400;
+			height: 56px;
+			width: 200px;
+			color: $violet;
+			background: white;
+			font-size: 1.8rem;
+			text-decoration: none;
+			padding: 1.5rem 4rem;
+			border-radius: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: 0px 6px 12px 1px rgba(0, 0, 0, 0.3);
+			transition: 150ms ease-in-out;
+
+			&:hover {
+				background-color: $magenta;
+				color: white;
+			}
+		}
+	}
+}
+
+footer {
+	ul {
+		list-style: none;
+		display: flex;
+		gap: 1.7rem;
+		position: absolute;
+		bottom: 4rem;
+		right: 8rem;
+	}
+	li {
+		height: 3.9rem;
+		width: 3.9rem;
+		border-radius: 100%;
+		border: 0.1rem solid white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: 150ms ease-in-out;
+
+		i {
+			color: white;
+			font-size: 1.8rem;
+			transition: 150ms ease-in-out;
+		}
+
+		&:hover {
+			border-color: $magenta;
+
+			i {
+				color: $magenta;
+			}
+		}
+	}
+}
+
+@media (max-width: 920px) {
+	body {
+		background: url('../images/bg-mobile.svg') no-repeat $violet;
+		background-size: 100%;
+		min-height: 100vh;
+		padding: 5.3rem 7rem 3.9rem;
+	}
+
+	.container {
+		flex-direction: column;
+		text-align: center;
+
+		&__left {
+			padding-top: 5.4rem;
+		}
+
+		&__right {
+			padding-top: 0.8rem;
+
+			h1 {
+				line-height: 3.6rem;
+			}
+
+			p {
+				font-size: 1.8rem;
+				line-height: 2.7rem;
+				padding: 0;
+				margin: 1.5rem 0 2.4rem;
+			}
+
+			a {
+				width: 28rem;
+				height: 5.2rem;
+				margin: 4rem auto 10rem auto;
+			}
+		}
+	}
+
+	footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		ul {
+			position: static;
+			justify-content: center;
+			margin-bottom: 3.9rem;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 3rem 3.7rem 3.9rem 3.7rem;
+	}
+
+	.container {
+		&__right {
+			p {
+				font-size: 1.6rem;
+				line-height: 2.4rem;
+			}
+		}
+	}
+}
