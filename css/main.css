@@ -34,9 +34,10 @@ header .logo {
 
 .container__left {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 55.5%;
-          flex: 0 1 55.5%;
+      -ms-flex: 0 1 55.2%;
+          flex: 0 1 55.2%;
   padding-top: 8.5rem;
+  margin-left: 0.3rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -144,6 +145,15 @@ footer li:hover {
 
 footer li:hover i {
   color: #e882e8;
+}
+
+@media (max-width: 1080px) {
+  body {
+    padding-right: 4rem;
+  }
+  .container__right {
+    padding-top: 8rem;
+  }
 }
 
 @media (max-width: 920px) {

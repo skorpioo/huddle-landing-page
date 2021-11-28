@@ -33,8 +33,9 @@ header .logo {
 	gap: 5.4rem;
 
 	&__left {
-		flex: 0 1 55.5%;
+		flex: 0 1 55.2%;
 		padding-top: 8.5rem;
+		margin-left: 0.3rem;
 		align-self: center;
 
 		img {
@@ -120,6 +121,17 @@ footer {
 			i {
 				color: $magenta;
 			}
+		}
+	}
+}
+
+@media (max-width: 1080px) {
+	body {
+		padding-right: 4rem;
+	}
+	.container {
+		&__right {
+			padding-top: 8rem;
 		}
 	}
 }
