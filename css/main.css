@@ -12,6 +12,11 @@ html {
   font-size: 62.5%;
 }
 
+h1,
+a {
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
   font-family: 'Open sans', sans-serif;
   background: url("../images/bg-desktop.svg") no-repeat #674baf;
@@ -32,7 +37,7 @@ header .logo {
   gap: 5.4rem;
 }
 
-.container__left {
+.container__left-col {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 55.2%;
           flex: 0 1 55.2%;
@@ -43,19 +48,18 @@ header .logo {
       align-self: center;
 }
 
-.container__left img {
+.container__left-col img {
   width: 100%;
 }
 
-.container__right {
+.container__right-col {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 12.9rem 0 0;
 }
 
-.container__right h1 {
-  font-family: 'Poppins', sans-serif;
+.container__right-col h1 {
   font-size: clamp(2.4rem, 3vw, 3.55rem);
   font-weight: 600;
   color: white;
@@ -63,7 +67,7 @@ header .logo {
   letter-spacing: 0.01rem;
 }
 
-.container__right p {
+.container__right-col p {
   font-size: 1.8rem;
   line-height: 2.7rem;
   padding-right: 1rem;
@@ -71,8 +75,7 @@ header .logo {
   color: white;
 }
 
-.container__right a {
-  font-family: 'Poppins', sans-serif;
+.container__right-col a {
   font-weight: 400;
   height: 56px;
   width: 200px;
@@ -80,8 +83,7 @@ header .logo {
   background: white;
   font-size: 1.8rem;
   text-decoration: none;
-  padding: 1.5rem 4rem;
-  border-radius: 30px;
+  border-radius: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,7 +99,7 @@ header .logo {
   transition: 150ms ease-in-out;
 }
 
-.container__right a:hover {
+.container__right-col a:hover {
   background-color: #e882e8;
   color: white;
 }
@@ -151,7 +153,7 @@ footer li:hover i {
   body {
     padding-right: 4rem;
   }
-  .container__right {
+  .container__right-col {
     padding-top: 8rem;
   }
 }
@@ -170,22 +172,22 @@ footer li:hover i {
             flex-direction: column;
     text-align: center;
   }
-  .container__left {
+  .container__left-col {
     padding-top: 5.4rem;
   }
-  .container__right {
+  .container__right-col {
     padding-top: 0.8rem;
   }
-  .container__right h1 {
+  .container__right-col h1 {
     line-height: 3.6rem;
   }
-  .container__right p {
+  .container__right-col p {
     font-size: 1.8rem;
     line-height: 2.7rem;
     padding: 0;
     margin: 1.5rem 0 2.4rem;
   }
-  .container__right a {
+  .container__right-col a {
     width: 28rem;
     height: 5.2rem;
     margin: 4rem auto 10rem auto;
@@ -214,7 +216,7 @@ footer li:hover i {
   body {
     padding: 3rem 3.7rem 3.9rem 3.7rem;
   }
-  .container__right p {
+  .container__right-col p {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
